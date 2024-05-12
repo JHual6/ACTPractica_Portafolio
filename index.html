@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link href="./assets/vendor/font-awesome/fontawesome.css" rel="stylesheet" />
+    <link href="./assets/vendor/font-awesome/brands.css" rel="stylesheet" />
+    <link href="./assets/vendor/font-awesome/solid.css" rel="stylesheet" />
+    <!-- Normalize -->
+    <link rel="stylesheet" href="./assets/vendor/normalize/normalize.css">
+    <!-- Font Marmeland -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marmelad&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Portafolio Jonathan Huala</title>
+    <link rel="Website icon" type="png" href="./assets/img/logoblanco.png ">
+</head>
+<body data-bs-spy="scroll">
+
+<!-- Aclaración = Eliminé el data-bs-target="#navbar" del body ya que al presionar una vez el botón en dispositivos móviles se eliminaba la navbar,
+al eliminarlo no ocurre ese problema, puede que no sea la mejor decisión pero no sabía como arreglarlo -->
+
+<!-- Barra de navegación -->
+    <header>
+        <nav class="navbar navbar-expand-lg menu fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">
+                    <img class="imagen_logo" src="./assets/img/Logo3.0Negro.png" width="180" height="70" alt="Logotipo">
+                </a>
+                <button class="navbar-toggler d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon top-bar"></span>
+                    <span class="toggler-icon middle-bar"></span>
+                    <span class="toggler-icon bottom-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link px-4 fw-bold menu_items" aria-current="page" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-4 fw-bold menu_items" aria-current="page" href="#sobre_mi">Conóceme</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-4 fw-bold menu_items" aria-current="page" href="#portafolio">Portafolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-4 fw-bold menu_items" aria-current="page" href="#certificados">Certificados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-4 fw-bold menu_items" aria-current="page" href="#Contactos">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Imagen de fondo y sección de bienvenida -->
+    <aside class="img_bienvenida" id="inicio">
+        <div class="fondo_bienvenida">
+            <h1 class="text-white fw-bold txt_bienvenida">Bienvenido <br> Mi nombre es <br> Jonathan Huala</h1>   
+        </div>
+    </aside>
+
+    <!-- Sobre mí, sección con información personal -->
+    <div class="fondo-color container-fluid" id="sobre_mi">
+        <div class="row align-items-center cuadro shadow">
+            <div class="col-sm-12 col-md-5 col-lg-4 foto_sm">
+                <img class="img_sm" src="./assets/img/fotoSM.jpeg" alt="Sobre mi foto">
+            </div>
+            <div class="col-sm-12 col-md-7 col-lg-8 text-white texto_sm">
+                <h1 class="texto_sm_titulo fw-bold">Sobre mí</h1>
+                <p>Hola, soy Jonathan Huala, estudié 2 años en la UCT ingeniería civil en informática el 2019 
+                    y me transladé a causa de la pandemia al DUOC Puerto Montt donde estoy en mi 3er año estudiando ingeniería en informática, me gusta programar
+                    sea el lenguaje que ocupe en ese momento, siempre y cuando lo entienda, me gusta aprender cosas y tengo altas expectativas
+                    y proyctos en mi mente que me gustaría crear. <br>
+                    Mi mayor fuerte es la programación, ya que el diseño no se me da mucho, aunque me guste necesito una mirada más experimentada
+                    para poder crear algo bueno, he ocupado JAVA, Python, HTML, CSS, SQL y estoy aprendiendo JavaScript, también he tenido un leve
+                    acercamiento con php y he ocupado RobotBasic. </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portafolio, sección con proyectos realizados -->
+    <div class="fondo_portadolio container-fluid text-center text-white" id="portafolio">
+        <h1 class="py-5 fw-bold">Portafolio</h1>
+        <div class="row">
+            <div class="col-md-6 cards_displays ">
+                <div class="card my-3 shadow">
+                    <div class="card-body text-white cards_comp">
+                        <h5 class="card-title">Encargo Grupo Cero</h5>
+                        <img class="img_card" src="./assets/img/Portafolio1.png" alt="Foto Encargo Grupo Cero">
+                        <a href="https://jhual6.github.io/ACTPr-ctica-CasoGrupoCero/" target="_blank"><button type="button" class="btn boton">Ver</button></a>
+                        <button data-bs-toggle="modal" data-bs-target="#mostrar-modal_grupoCeroInfo" type="button" class="btn boton">Info</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 cards_displays">
+                <div class="card my-3 comp_port2 shadow">
+                    <div class="card-body text-white cards_comp">
+                        <h5 class="card-title">Encargo Casino Duoc</h5>
+                        <img class="img_card java_card" src="./assets/img/Portafolio2.PNG" alt="Foto Encargo Casino Duoc">
+                        <button id="mostrar-modal_casinoDuocVer" data-bs-toggle="modal" data-bs-target="#modal-long-content_CasinoDuocver"  type="button" class="btn boton">Ver</button>
+                        <button data-bs-toggle="modal" data-bs-target="#mostrar-modal_casinoDuocInfo" type="button" class="btn boton">Info</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido al apretar información en encargo Grupo Cero -->
+    <div class="modal fade" id="mostrar-modal_grupoCeroInfo" tabindex="-1" aria-labelledby="mostrar-modal_grupoCeroInfo" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mostrar-modal_grupoCeroInfo">Información del encargo para el Grupo Cero</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="texto_modal"> Este proyecto fué realizado para la evaluación 1 para la asignatura Programación Web,
+                                            fué realizada individualmente, lo que fué ocupado en este proyecto fué Bootstrap 5, HTML y
+                                            CSS. Tiene un diseño resposive implementado con Bootstrap y algunas especificaciones en CSS.
+                                            No es completamente funcional por múltiples factores y fué mi primer acercamiento a HTML, CSS y 
+                                            Bootstrap.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido al apretar la sección ver en CasinoDuoc -->
+    <div class="modal fade" id="modal-long-content_CasinoDuocver" tabindex="-1" aria-labelledby="modal-long-content_CasinoDuocver-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-long-content_CasinoDuocver-label">Casino Duoc - Aplicación de escritorio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="contenido-largo-CasinoDuocver">
+                    <h5 class="texto_modal">Inicio de sesión de la aplicación de escritorio</h5>
+                    <img class="img-fluid" src="./assets/img/Portafolio2_1.PNG" alt="Portafolio2 imagen1">
+                    <h5 class="texto_modal">Menú principal del la aplicación, en este se muestra al costado las secciones</h5>
+                    <img class="img-fluid" src="./assets/img/Portafolio2_2.PNG" alt="Portafolio2 imagen2">
+                    <h5 class="texto_modal">Sección de agregado de productos</h5>
+                    <img class="img-fluid" src="./assets/img/Portafolio2_3.PNG" alt="Portafolio2 imagen3">
+                    <h5 class="texto_modal">Sección de eliminación de productos</h5>
+                    <img class="img-fluid" src="./assets/img/Portafolio2_4.PNG" alt="Portafolio2 imagen4">
+                    <h5 class="texto_modal">Sección de listado de productos</h5>
+                    <img class="img-fluid" src="./assets/img/Portafolio2_5.PNG" alt="Portafolio2 imagen5">
+                    <h5 class="texto_modal">Sección de modificación de productos</h5>
+                    <img class="img-fluid" src="./assets/img/Portafolio2_6.PNG" alt="Portafolio2 imagen6">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido al apretar información en CasinoDuoc -->
+    <div class="modal fade" id="mostrar-modal_casinoDuocInfo" tabindex="-1" aria-labelledby="mostrar-modal_casinoDuocInfo" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mostrar-modal_casinoDuocInfo">Información del trabajo para Casino DuocUC</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="texto_modal"> Este proyecto fué realizado como última evaluación para la asignatura 
+                                    Desarrollo de Software de Escritorio, está planeado para ser funcional, 
+                                    a momento de realizar una de las 4 funciones que se pueden realizar los
+                                    cambios son realizados en la base de datos asociada, al igual que se mostrarán
+                                    los datos buscados. 
+                                    Mi participación en el diseño fué realizarlo en el menú principal
+                                    al igual que uno anterior a las secciones Agregar, Eliminar, Modificar y Listar, el 
+                                    diseño realizado fué reemplazado por el que se puede ver en las capturas y era igual al 
+                                    que se puede visualizar en el Menú principal.
+                                    Mi participación en el código fué crear la mayor parte del código en Java, tanto las funciones, 
+                                    los métodos y el organizarlo, al igual que participé en el codificado en la conexión a la base 
+                                    de datos, principalmente arreglando, creando y modificando codificación.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificados, sección con certificados completados o en pendientes -->
+    <div class="container-fluid text-white text-center fondo_certificados" id="certificados">
+        <h1 class="fw-bold">Certificados</h1>
+        <div class="certificados_completados row">
+            <div class="col-auto estado_txt">
+                <h2>Completados</h2>
+            </div>
+            <div class="container">  
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        <div class="certificado_caja shadow">
+                            <h4>Certificado de análisis y planificación de requerimientos informáticos</h4>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated custom-color" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        <div class="certificado_caja shadow">
+                            <h4>Certificado de análisis y desarrollo de modelos de datos</h4>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated custom-color" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="certificados_pendientes row">
+            <div class="col-auto estado_txt shadow-sm">
+                <h2>Pendientes</h2>
+            </div>
+            <div class="container">  
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        <div class="certificado_caja shadow">
+                            <h4>Certificado internacional en inglés intermedio alto</h4>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated custom-color" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        <div class="certificado_caja shadow">
+                            <h4>Certificado de programación de software</h4>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated custom-color" role="progressbar" style="width: 62.5%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contacto, sección con información de contacto donde se envía un correo al contacto -->
+    <div class="container-fluid text-white contacto_fondo" id="Contactos">
+        <h1 class="text-center fw-bold py-3 textocontacto">Contacto</h1>
+        <form action="https://formsubmit.co/jo.huala@duocuc.cl" method="POST">
+            <div class="row g-2">
+                <div class="col-6">
+                    <div class="form">
+                        <label for="nombrecampo" class="form-label texto_contacto">Nombre</label>
+                        <input type="text" class="form-control campo_contacto shadow-sm" id="nombrecampo" name="Nombre">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form">
+                        <label for="apellidocampo" class="form-label texto_contacto">Apellido</label>
+                        <input type="text" class="form-control campo_contacto shadow-sm" id="apellidocampo" name="Apellido">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form">
+                        <label for="asuntocampo" class="form-label texto_contacto">Asunto</label>
+                        <input type="text" class="form-control campo_contacto shadow-sm" id="asuntocampo" name="_subject">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form">
+                        <label for="correocampo" class="form-label texto_contacto">Correo</label>
+                        <input type="email" class="form-control campo_contacto shadow-sm" id="correocampo" name="Correo">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form">
+                        <label for="detallescampo" class="form-label texto_contacto">Detalles</label>
+                        <textarea class="form-control campo_contacto shadow" id="detallescampo" name="Mensaje" style="height: 100px"></textarea>
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn boton_contacto">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Pié de página, sección con información sobre el pié de página -->
+    <footer class="fondo_pie_pagina container-fluid">
+        <div>
+            <img class="pie_pag_foto" src="./assets/img/Logo3.0Blanco.png" alt="logo">
+        </div>
+        <div>
+            <p class="text-white pie_pag_texto">©Copyright 2024. Jonathan Huala. <br> Todos los derechos reservados</p>
+        </div>
+    </footer> 
+
+    <!-- Bootstrap 5 -->
+    <script src="./assets/vendor/bootstrap/bootstrap.js"></script>
+    <!-- JQuery -->
+    <script src="./assets/vendor/jquery/jquery-3.7.1.min.js"></script>
+    <!-- JS -->
+    <script src="./assets/js/scripts.js"></script>
+</body>
+</html>
