@@ -9,7 +9,7 @@
     <link href="./assets/vendor/font-awesome/brands.css" rel="stylesheet" />
     <link href="./assets/vendor/font-awesome/solid.css" rel="stylesheet" />
     <!-- Normalize -->
-    <link rel="stylesheet" href="./assets/vendor/normalize/normalize.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
     <!-- Font Marmeland -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css">
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- JQuery y validación -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    
     <title>Portafolio Jonathan Huala</title>
     <link rel="Website icon" type="png" href="./assets/img/logoblanco.png ">
 </head>
@@ -76,16 +80,16 @@ al eliminarlo no ocurre ese problema, puede que no sea la mejor decisión pero n
             </div>
             <div class="col-sm-12 col-md-7 col-lg-8 text-white texto_sm">
                 <h1 class="texto_sm_titulo fw-bold">Sobre mí</h1>
-                <p>Hola, soy Jonathan Huala, estudié 2 años en la UCT ingeniería civil en informática el 2019 
-                    y me transladé a causa de la pandemia al DUOC Puerto Montt donde estoy en mi 3er año estudiando ingeniería en informática, me gusta programar
-                    sea el lenguaje que ocupe en ese momento, siempre y cuando lo entienda, me gusta aprender cosas y tengo altas expectativas
-                    y proyctos en mi mente que me gustaría crear. <br>
+                <p>Hola, soy Jonathan Huala, el 2019 entré a la UCT en ingeniería civil en informática estuve 2 años 
+                    y me transladé al DUOC Puerto Montt causa de la pandemia. Me encuentro en mi 3er año en ingeniería en informática, 
+                    me gusta aprender cosas nuevas de mi carrera y tengo altas expectativas en los proyectos que me gustarían realizar. <br>
                     Mi mayor fuerte es la programación, ya que el diseño no se me da mucho, aunque me guste necesito una mirada más experimentada
                     para poder crear algo bueno, he ocupado JAVA, Python, HTML, CSS, SQL y estoy aprendiendo JavaScript, también he tenido un leve
-                    acercamiento con php y he ocupado RobotBasic. </p>
+                    acercamiento con PHP y he ocupado RobotBasic.p </p>
             </div>
         </div>
     </div>
+    
 
     <!-- Portafolio, sección con proyectos realizados -->
     <div class="fondo_portadolio container-fluid text-center text-white" id="portafolio">
@@ -102,6 +106,16 @@ al eliminarlo no ocurre ese problema, puede que no sea la mejor decisión pero n
                 </div>
             </div>
             <div class="col-md-6 cards_displays">
+                <div class="card my-3 comp_port3 shadow">
+                    <div class="card-body text-white cards_comp">
+                        <h5 class="card-title">Implementación de API</h5>
+                        <img class="img_card" src="./assets/img/Portafolio3.PNG" alt="Foto Encargo Casino Duoc">
+                        <a href="https://jhual6.github.io/PruebaAPIHuachitos/" target="_blank"><button type="button" class="btn boton">Ver</button></a>
+                        <button data-bs-toggle="modal" data-bs-target="#mostrar-modal_APIHuachitosInfo" type="button" class="btn boton">Info</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 cards_displays">
                 <div class="card my-3 comp_port2 shadow">
                     <div class="card-body text-white cards_comp">
                         <h5 class="card-title">Encargo Casino Duoc</h5>
@@ -109,6 +123,28 @@ al eliminarlo no ocurre ese problema, puede que no sea la mejor decisión pero n
                         <button id="mostrar-modal_casinoDuocVer" data-bs-toggle="modal" data-bs-target="#modal-long-content_CasinoDuocver"  type="button" class="btn boton">Ver</button>
                         <button data-bs-toggle="modal" data-bs-target="#mostrar-modal_casinoDuocInfo" type="button" class="btn boton">Info</button>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido al apretar información en Implemento API Huachitos -->
+    <div class="modal fade" id="mostrar-modal_APIHuachitosInfo" tabindex="-1" aria-labelledby="mostrar-modal_APIHuachitosInfo" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mostrar-modal_APIHuachitosInfo">Información del encargo para el Grupo Cero</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="texto_modal"> Este proyecto fué realizado para consumir la API Huachitos, mostrar mi manejo con las 
+                                            APIs y también mostrar esta API que es nacional y muestra animalitos buscando adopción 
+                                            o perdidos, la encontré algo interesante y le realicé.Este proyecto fué realizado para la evaluación 1 para la asignatura Programación Web,
+                                            fué realizada individualmente, lo que fué ocupado en este proyecto fué Bootstrap 5, HTML y
+                                            CSS. Tiene un diseño resposive implementado con Bootstrap y algunas especificaciones en CSS.
+                                            No es completamente funcional por múltiples factores y fué mi primer acercamiento a HTML, CSS y 
+                                            Bootstrap.
+                    </p>
                 </div>
             </div>
         </div>
@@ -242,47 +278,48 @@ al eliminarlo no ocurre ese problema, puede que no sea la mejor decisión pero n
         </div>
     </div>
 
-    <!-- Contacto, sección con información de contacto donde se envía un correo al contacto -->
-    <div class="container-fluid text-white contacto_fondo" id="Contactos">
-        <h1 class="text-center fw-bold py-3 textocontacto">Contacto</h1>
-        <form action="https://formsubmit.co/jo.huala@duocuc.cl" method="POST">
-            <div class="row g-2">
-                <div class="col-6">
-                    <div class="form">
-                        <label for="nombrecampo" class="form-label texto_contacto">Nombre</label>
-                        <input type="text" class="form-control campo_contacto shadow-sm" id="nombrecampo" name="Nombre">
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="form">
-                        <label for="apellidocampo" class="form-label texto_contacto">Apellido</label>
-                        <input type="text" class="form-control campo_contacto shadow-sm" id="apellidocampo" name="Apellido">
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="form">
-                        <label for="asuntocampo" class="form-label texto_contacto">Asunto</label>
-                        <input type="text" class="form-control campo_contacto shadow-sm" id="asuntocampo" name="_subject">
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="form">
-                        <label for="correocampo" class="form-label texto_contacto">Correo</label>
-                        <input type="email" class="form-control campo_contacto shadow-sm" id="correocampo" name="Correo">
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="form">
-                        <label for="detallescampo" class="form-label texto_contacto">Detalles</label>
-                        <textarea class="form-control campo_contacto shadow" id="detallescampo" name="Mensaje" style="height: 100px"></textarea>
-                    </div>
-                </div>
-                <div class="col-12 text-center">
-                    <button type="submit" class="btn boton_contacto">Enviar</button>
+ <!-- Contacto, sección con información de contacto donde se envía un correo al contacto -->
+ <div class="container-fluid text-white contacto_fondo" id="Contactos">
+    <h1 class="text-center fw-bold py-3 textocontacto">Contacto</h1>
+    <form id="formulario" action="https://formsubmit.co/jo.huala@duocuc.cl" method="POST">
+        <div class="row g-2">
+            <div class="col-6">
+                <div class="form">
+                    <label for="name" class="form-label texto_contacto">Nombre</label>
+                    <input type="text" class="form-control campo_contacto shadow-sm" id="name" name="name">
                 </div>
             </div>
-        </form>
-    </div> 
+            <div class="col-6">
+                <div class="form">
+                    <label for="apellido" class="form-label texto_contacto">Apellido</label>
+                    <input type="text" class="form-control campo_contacto shadow-sm" id="apellido" name="apellido">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form">
+                    <label for="_subject" class="form-label texto_contacto">Asunto</label>
+                    <input type="text" class="form-control campo_contacto shadow-sm" id="_subject" name="_subject">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form">
+                    <label for="email" class="form-label texto_contacto">Correo</label>
+                    <input type="email" class="form-control campo_contacto shadow-sm" id="email" name="email">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form">
+                    <label for="mensaje" class="form-label texto_contacto">Detalles</label>
+                    <textarea class="form-control campo_contacto shadow" id="mensaje" name="mensaje" style="height: 100px"></textarea>
+                </div>
+            </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn boton_contacto">Enviar</button>
+            </div>
+        </div>
+    </form>
+</div> 
+
 
     <!-- Pié de página, sección con información sobre el pié de página -->
     <footer class="fondo_pie_pagina container-fluid">
@@ -296,8 +333,6 @@ al eliminarlo no ocurre ese problema, puede que no sea la mejor decisión pero n
 
     <!-- Bootstrap 5 -->
     <script src="./assets/vendor/bootstrap/bootstrap.js"></script>
-    <!-- JQuery -->
-    <script src="./assets/vendor/jquery/jquery-3.7.1.min.js"></script>
     <!-- JS -->
     <script src="./assets/js/scripts.js"></script>
 </body>

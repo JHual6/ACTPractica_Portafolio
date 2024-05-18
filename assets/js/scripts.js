@@ -1,20 +1,25 @@
-document.addEventListener("DOMContentLoaded", function() {
-
-    var formulario = document.getElementById("formulario-contacto");
-
-    // Envío de formulario a través de https://formsubmit.co/
-    formulario.addEventListener("submit", function(event) {
-
-        var nombre = document.getElementById("nombrecampo").value;
-        var apellido = document.getElementById("apellidocampo").value;
-        var mensaje = document.getElementById("detallescampo");
-        mensaje.value += "\n\n" + nombre + " " + apellido;
-    });
-});
-
-// Función para mostrar el contenido largo al presionar el botón
-document.getElementById('mostrar-contenido').addEventListener('click', function() {
-    document.getElementById('contenido-largo').style.display = 'block';
-    this.style.display = 'none'; // Oculta el botón después de mostrar el contenido
-});
-
+jQuery('#formulario').validate({
+    rules:{
+      name : "required",
+      apellido : "required",
+      _subject : "required",
+      email : {
+        required : true,
+        email : true
+      },
+      mensaje : "required",
+    },
+    messages : {
+      name : "Por favor, escriba su nombre",
+      apellido : "Por favor ingrese su apellido",
+      _subject: "Por favor ingrese el asunto",
+      email : {
+        required  : "Por favor ingrese su correo electrónico",
+        email : "Por favor introduzca un correo electrónico válido",
+      },
+      mensaje : "Por favor ingrese un mensaje",
+    },
+    submitHandler : function(form){
+      form.submit();
+    }
+  });

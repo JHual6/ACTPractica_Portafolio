@@ -322,6 +322,9 @@ podía sacar el borde del hamburger, por lo cual decidí ocupar este*/
     color: white;
     
 }
+.error{
+    color: red;
+}
 
 /* Sección - Pié de página */
 .fondo_pie_pagina{
