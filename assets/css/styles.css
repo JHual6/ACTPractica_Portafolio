@@ -403,7 +403,7 @@ podía sacar el borde del hamburger, por lo cual decidí ocupar este*/
     }
     .certificado_caja {
         width: 90%;
-    }
+    } 
     .fondo_certificados .container {
         display: flex;
         justify-content: center;
