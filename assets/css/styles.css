@@ -5,8 +5,9 @@
 /* Colores que serán ocupados en la página */
 :root{
     --color1: #C0C0C0;
+    --color1-M: #D3D3D3 ;
     --color2: #2D2D2D;
-    --color3: #D9D9D9;
+    --color3: #800020;
     --color4: #333333;
 }
 
@@ -32,7 +33,7 @@ body::-webkit-scrollbar-thumb, .modal-body::-webkit-scrollbar-thumb{
 
 /* Sección - Barra de navegación */
 .menu{
-    background-color: var(--color1)
+    background-color: var(--color1-M)
 }
 .menu_items{
     transition: 0.7s ease;
@@ -211,7 +212,7 @@ podía sacar el borde del hamburger, por lo cual decidí ocupar este*/
     justify-content: center;
 }
 .card{
-    width: 30vw;
+    width: 33vw;
     border-radius: 2vw;
 }
 .cards_comp{
@@ -285,7 +286,7 @@ podía sacar el borde del hamburger, por lo cual decidí ocupar este*/
 }
 .progress{
     width: 36vw;
-    background-color: var(--color3);
+    background-color: var(--color1-M);
 }
 .progress-bar.custom-color{
     background-color: var(--color2);
@@ -300,11 +301,11 @@ podía sacar el borde del hamburger, por lo cual decidí ocupar este*/
     margin-bottom: 5vw;
 }
 .form{
-    padding: 1vw;
+    padding: 0vw 3vw 0vw 3vw;
 }
 .campo_contacto{
     border-radius: 2vw;
-    background-color: var(--color3);
+    background-color: var(--color1-M);
     transition: 0.7s ease;
 }
 .boton_contacto{
@@ -312,6 +313,7 @@ podía sacar el borde del hamburger, por lo cual decidí ocupar este*/
     background-color: var(--color2);
     color: white;
     width: 10vw;
+    margin-top: 1em;
     margin-left: 1vw;
     transition: 0.7s ease;
 }
@@ -386,24 +388,36 @@ podía sacar el borde del hamburger, por lo cual decidí ocupar este*/
     
     /* Sección - Portafolio */
     .cards_comp{
-        width: 42vw;
+        width: 50vw;
     }
     .boton{
-        width: 12vw;
+        width: 18vw;
     }
 
     /* Sección - Certificados */
     .fondo_certificados h2{
-        font-size: 3vw;
+        font-size: 4vw;
     }
     .fondo_certificados h4{
-        font-size: 2vw;
+        font-size: 4vw;
+    }
+    .certificado_caja {
+        width: 90%;
+    }
+    .fondo_certificados .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .progress {
+        width: 90%;
     }
 
     /* Sección - Contacto */
     .boton_contacto{
-        width: 18vw;
-    }    
+        width: 28vw;
+    }
+    
 }
 
 /* Responsive para dispositivos medianos */
