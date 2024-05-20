@@ -181,7 +181,7 @@ podía sacar el borde del hamburger, por lo cual decidí ocupar este*/
     justify-content: center;
     background-color: var(--color1);
     padding: 160px; 
-}
+} 
 .cuadro {
     background-color: var(--color2); 
     width: 90vw; 

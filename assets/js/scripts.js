@@ -22,4 +22,4 @@ jQuery('#formulario').validate({
     submitHandler : function(form){
       form.submit();
     }
-  });
+  }); 
