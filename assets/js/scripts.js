@@ -23,3 +23,5 @@ jQuery('#formulario').validate({
       form.submit();
     }
   });
+
+  
